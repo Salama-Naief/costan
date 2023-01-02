@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "content_users",
+  "info": {
+    "singularName": "content-user",
+    "pluralName": "content-users",
+    "displayName": "contentUser",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "platformName": {
+      "type": "string",
+      "required": true
+    },
+    "members": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "content_users"
+    },
+    "plateforms": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::content-type.content-type"
+    },
+    "adminUser": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "adminUser"
+    },
+    "contents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::content.content",
+      "mappedBy": "content_user"
+    }
+  }
+}

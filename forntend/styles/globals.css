@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input {
+  @apply p-2 border rounded w-full outline-none;
+}
+.navIcons {
+  @apply px-1.5 text-textColor-100 w-9 h-9 transition duration-200 flex items-center justify-center hover:bg-gray-100 rounded cursor-pointer;
+}
+.leftSideIcons {
+  @apply p-2 w-14 h-14 transition duration-200 flex items-center justify-center hover:bg-blue-100 rounded cursor-pointer;
+}
+.taskIcons {
+  @apply px-2 py-0.5  rounded-full flex items-center space-x-1;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+}
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(184, 184, 184);
+}

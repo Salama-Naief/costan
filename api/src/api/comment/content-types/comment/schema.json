@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "comments",
+  "info": {
+    "singularName": "comment",
+    "pluralName": "comments",
+    "displayName": "comment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "contentId": {
+      "type": "integer",
+      "required": true
+    },
+    "fromUserId": {
+      "type": "integer"
+    },
+    "happyCount": {
+      "type": "integer"
+    },
+    "angryCount": {
+      "type": "integer"
+    },
+    "disappointedCound": {
+      "type": "integer"
+    },
+    "message": {
+      "type": "text",
+      "required": false
+    },
+    "teamRoles": {
+      "type": "enumeration",
+      "enum": [
+        "admin",
+        "member"
+      ]
+    },
+    "platformName": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tasks",
+  "info": {
+    "singularName": "task",
+    "pluralName": "tasks",
+    "displayName": "task",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "contentId": {
+      "type": "integer",
+      "unique": false,
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "state": {
+      "type": "enumeration",
+      "enum": [
+        "not started",
+        "in progress",
+        "on hold",
+        "completed"
+      ],
+      "default": "not started"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "story board",
+        "script/editing",
+        "shoting/recording",
+        "production",
+        "review",
+        "final draft"
+      ]
+    },
+    "memberId": {
+      "type": "integer"
+    }
+  }
+}

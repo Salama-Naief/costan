@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "task_contents",
+  "info": {
+    "singularName": "task-content",
+    "pluralName": "task-contents",
+    "displayName": "taskContent"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "taskId": {
+      "type": "integer",
+      "required": true
+    },
+    "textContent": {
+      "type": "richtext"
+    },
+    "img": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "sound": {
+      "allowedTypes": [
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "vedio": {
+      "allowedTypes": [
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
